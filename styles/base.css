@@ -35,6 +35,9 @@ body {
     font-size: clamp(1.3rem, 3vw, 2rem);
     margin-bottom: 1rem;
     color: #fff;
+    background: var(--brand-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
 }
 
 .site-header nav {
@@ -49,7 +52,7 @@ body {
     text-decoration: none;
     padding: 0.65rem 1rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.12);
+    background: var(--brand-dark);
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 

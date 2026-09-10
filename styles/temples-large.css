@@ -1,0 +1,25 @@
+@media (min-width: 700px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .nav-menu a {
+    min-width: 6rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  figure img {
+    height: 250px;
+  }
+}

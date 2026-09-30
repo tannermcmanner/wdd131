@@ -82,7 +82,7 @@ const temples = [
 ];
 
 const gallery = document.querySelector(".gallery");
-const filterButtons = document.querySelectorAll(".filter-button");
+const filterLinks = document.querySelectorAll(".filter-button");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -134,11 +134,12 @@ function filterTemples(filter) {
   }
 }
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    filterButtons.forEach((filterButton) => filterButton.classList.remove("active"));
-    button.classList.add("active");
-    displayTemples(filterTemples(button.dataset.filter));
+filterLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    filterLinks.forEach((filterLink) => filterLink.classList.remove("active"));
+    link.classList.add("active");
+    displayTemples(filterTemples(link.dataset.filter));
     navMenu.classList.remove("open");
     navToggle.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");

@@ -69,6 +69,7 @@ img {
 }
 
 .filter-button {
+  display: block;
   padding: 0.7rem 1rem;
   border: 0;
   border-radius: 999px;
@@ -77,6 +78,7 @@ img {
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 

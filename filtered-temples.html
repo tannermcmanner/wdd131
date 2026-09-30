@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="A responsive, filterable album of temples from around the world."
+    >
+    <meta name="author" content="Tanner McNatt">
+    <title>Filtered Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="title-bar">
+        <h2>Temple Album</h2>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-menu" class="nav-menu">
+          <button type="button" class="filter-button active" data-filter="home">Home</button>
+          <button type="button" class="filter-button" data-filter="old">Old</button>
+          <button type="button" class="filter-button" data-filter="new">New</button>
+          <button type="button" class="filter-button" data-filter="large">Large</button>
+          <button type="button" class="filter-button" data-filter="small">Small</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Temple Highlights</h1>
+      <section class="gallery" aria-label="Temple photo gallery"></section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Tanner McNatt | Utah</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

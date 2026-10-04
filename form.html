@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Product review form for time machine parts, letting customers rate and review items like the flux capacitor and time circuits."
+    >
+    <meta name="author" content="Tanner McNatt">
+    <title>Product Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="title-bar">
+        <h2>Time Machine Parts Co.</h2>
+      </div>
+      <img src="images/flux-capacitor-icon.png" alt="Flux capacitor logo" class="site-logo">
+    </header>
+
+    <main>
+      <h1>Product Review Form</h1>
+      <p class="intro">
+        Already installed one of our parts? Let other time travelers know how it performed.
+      </p>
+
+      <form action="review.html" method="get">
+        <div class="form-field">
+          <label for="productName">Product Name</label>
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+        </div>
+
+        <fieldset class="form-field star-rating">
+          <legend>Overall Rating</legend>
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5" title="5 stars">&star;</label>
+          <input type="radio" id="star4" name="rating" value="4" required>
+          <label for="star4" title="4 stars">&star;</label>
+          <input type="radio" id="star3" name="rating" value="3" required>
+          <label for="star3" title="3 stars">&star;</label>
+          <input type="radio" id="star2" name="rating" value="2" required>
+          <label for="star2" title="2 stars">&star;</label>
+          <input type="radio" id="star1" name="rating" value="1" required>
+          <label for="star1" title="1 star">&star;</label>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="installDate">Date of Installation</label>
+          <input type="date" id="installDate" name="installDate" required>
+        </div>
+
+        <fieldset class="form-field">
+          <legend>Useful Features <span class="hint">(check all that apply)</span></legend>
+          <div class="checkbox-group">
+            <div class="checkbox-option">
+              <input type="checkbox" id="feature-install" name="feature" value="Easy Installation">
+              <label for="feature-install">Easy Installation</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="feature-performance" name="feature" value="Great Performance">
+              <label for="feature-performance">Great Performance</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="feature-value" name="feature" value="Good Value">
+              <label for="feature-value">Good Value</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="feature-durability" name="feature" value="Durable Build">
+              <label for="feature-durability">Durable Build</label>
+            </div>
+            <div class="checkbox-option">
+              <input type="checkbox" id="feature-support" name="feature" value="Excellent Support">
+              <label for="feature-support">Excellent Support</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="review">Written Review</label>
+          <textarea id="review" name="review" rows="5" placeholder="Tell us about your experience with this part..."></textarea>
+        </div>
+
+        <div class="form-field">
+          <label for="username">Your Name <span class="hint">(optional)</span></label>
+          <input type="text" id="username" name="username">
+        </div>
+
+        <div class="form-field form-submit">
+          <input type="submit" value="Submit Review">
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Tanner McNatt | Utah</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

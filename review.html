@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Confirmation page showing a submitted time machine parts product review and the running review count."
+    >
+    <meta name="author" content="Tanner McNatt">
+    <title>Review Submitted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="title-bar">
+        <h2>Time Machine Parts Co.</h2>
+      </div>
+      <img src="images/flux-capacitor-icon.png" alt="Flux capacitor logo" class="site-logo">
+    </header>
+
+    <main>
+      <h1>Thank You for Your Review!</h1>
+
+      <p id="noDataMessage" hidden>
+        We couldn't find any submitted review details. Please
+        <a href="form.html">fill out the review form</a> first.
+      </p>
+
+      <dl id="reviewSummary" class="review-summary">
+        <div class="review-row">
+          <dt>Product</dt>
+          <dd id="productNameOut"></dd>
+        </div>
+        <div class="review-row">
+          <dt>Overall Rating</dt>
+          <dd id="ratingOut" class="stars"></dd>
+        </div>
+        <div class="review-row">
+          <dt>Date of Installation</dt>
+          <dd id="dateOut"></dd>
+        </div>
+        <div class="review-row">
+          <dt>Useful Features</dt>
+          <dd id="featuresOut"></dd>
+        </div>
+        <div class="review-row">
+          <dt>Written Review</dt>
+          <dd id="reviewOut"></dd>
+        </div>
+        <div class="review-row">
+          <dt>Submitted By</dt>
+          <dd id="usernameOut"></dd>
+        </div>
+      </dl>
+
+      <p class="review-count">
+        You have submitted <span id="reviewCount">0</span> review(s) on this device.
+      </p>
+
+      <p class="form-submit">
+        <a class="button-link" href="form.html">Submit Another Review</a>
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Tanner McNatt | Utah</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

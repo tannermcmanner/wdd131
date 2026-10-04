@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Plan - Parkourpedia</title>
+    <meta name="description" content="Website planning document for Parkourpedia, a site dedicated to the history, milestones, and visual culture of parkour.">
+    <meta name="author" content="Tanner McManner">
+
+    <!-- Google Fonts: Permanent Marker (urban/street style for headings) + Open Sans (regular body font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="logo">PARKOURPEDIA</h1>
+        <p>All things parkour</p>
+    </header>
+
+    <nav class="plan-nav" aria-label="Site plan sections">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="plan-nav-list">
+            <span aria-hidden="true">&#9776;</span> Menu
+        </button>
+        <ul id="plan-nav-list">
+            <li><a href="#site-name">Site Name</a></li>
+            <li><a href="#site-purpose">Site Purpose</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+            <li><a href="#color-schema">Color Schema</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#wireframes">Wireframes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="site-name" aria-labelledby="site-name-heading">
+            <h2 id="site-name-heading">Site Name</h2>
+            <p><strong>Parkourpedia</strong></p>
+            <p>
+                The name combines "parkour" with the suffix "-pedia," signaling an
+                encyclopedia-style resource.
+            </p>
+            <p><em>Optional domain availability:</em> <code>parkourpedia.com</code></p>
+        </section>
+
+        <section id="site-purpose" aria-labelledby="site-purpose-heading">
+            <h2 id="site-purpose-heading">Site Purpose</h2>
+            <p>
+                The site's purpose is to inform users on the history and some major milestones of the sport.
+            </p>
+        </section>
+
+        <section id="scenarios" aria-labelledby="scenarios-heading">
+            <h2 id="scenarios-heading">Scenarios</h2>
+            <p>Scenario questions a site visitor might ask:</p>
+            <ol>
+                <li class="example">
+                    "Where did parkour actually come from, and who started it?"
+                </li>
+                <li class="example">
+                    "What are some of the biggest milestones in parkour history?""
+                </li>
+            </ol>
+        </section>
+
+        <section id="color-schema" aria-labelledby="color-schema-heading">
+            <h2 id="color-schema-heading">Color Schema</h2>
+            <p>
+                The palette aims to reflect the feel of parkour's urban training style.
+            </p>
+            <ul class="swatches">
+                <li class="swatch">
+                    <div class="swatch-color swatch-asphalt"></div>
+                    <figcaption><strong>Asphalt Black</strong> <code>#1d1d1d</code><br>Header, nav text, footer, text on light</figcaption>
+                </li>
+                <li class="swatch">
+                    <div class="swatch-color swatch-orange"></div>
+                    <figcaption><strong>Orange</strong> <code>#ff5a1f</code><br>Links, buttons, accents, headings</figcaption>
+                </li>
+                <li class="swatch">
+                    <div class="swatch-color swatch-concrete"></div>
+                    <figcaption><strong>Concrete Gray</strong> <code>#f2f2f0</code><br>Page background</figcaption>
+                </li>
+                <li class="swatch">
+                    <div class="swatch-color swatch-chalk"></div>
+                    <figcaption><strong>Chalk White</strong> <code>#ffffff</code><br>Section backgrounds, text on dark</figcaption>
+                </li>
+                <li class="swatch">
+                    <div class="swatch-color swatch-border"></div>
+                    <figcaption><strong>Border Gray</strong> <code>#d8d6d2</code><br>Borders, dividers, card outlines</figcaption>
+                </li>
+            </ul>
+        </section>
+
+        <section id="typography" aria-labelledby="typography-heading">
+            <h2 id="typography-heading">Typography</h2>
+            <p>Two fonts, loaded from Google Fonts, will be used across the site:</p>
+            <div class="type-sample">
+                <p class="heading-sample">Permanent Marker</p>
+                <p>
+                    Used for the logo, page titles, and section headings. Permanent
+                    Marker mimics bold spray-paint lettering, matching
+                    parkour's urban street culture.
+                </p>
+            </div>
+            <div class="type-sample">
+                <p class="body-sample" style="font-size:1.25rem; font-weight:600;">Open Sans</p>
+                <p class="body-sample">
+                    Used for body text, navigation, and captions. Keeps text easier to read.
+                </p>
+            </div>
+        </section>
+
+        <section id="wireframes" aria-labelledby="wireframes-heading">
+            <h2 id="wireframes-heading">Wireframes</h2>
+            <p>Rough layout of the Parkourpedia home page in mobile and desktop views.</p>
+            <div class="wireframes">
+                <figure class="wireframe">
+                    <h3>Mobile</h3>
+                    <div class="frame frame-mobile">
+                        <div>Header / Logo</div>
+                        <div>Nav (stacked)</div>
+                        <div>Hero Image + Intro Text</div>
+                        <div>History</div>
+                        <div>Milestones</div>
+                        <div>Footer</div>
+                    </div>
+                </figure>
+                <figure class="wireframe">
+                    <h3>Desktop</h3>
+                    <div class="frame frame-desktop">
+                        <div class="fd-header">Header / Logo</div>
+                        <div class="fd-nav">Nav (horizontal)</div>
+                        <div class="fd-hero">Hero Image + Intro Text</div>
+                        <div>History</div>
+                        <div>Milestones</div>
+                        <div class="fd-footer">Footer</div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Parkourpedia Website Plan &mdash; Tanner McNatt</p>
+    </footer>
+
+    <script>
+        // Toggles the dropdown nav menu on narrow screens.
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.getElementById('plan-nav-list');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navList.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        navList.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                navList.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+</html>

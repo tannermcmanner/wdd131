@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Parkourpedia</title>
+    <meta name="description" content="The origins and history of parkour, from the Methode Naturelle to the founding of the Yamakasi.">
+    <meta name="author" content="Tanner McManner">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">PARKOURPEDIA</h1>
+            </a>
+            <p class="tagline">All things parkour</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list">
+                <span aria-hidden="true">&#9776;</span> Menu
+            </button>
+            <ul id="primary-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html" aria-current="page">History</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>History</h2>
+            <p>This page is under construction and will cover the history of parkour next.</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Parkourpedia &mdash; Tanner McManner</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

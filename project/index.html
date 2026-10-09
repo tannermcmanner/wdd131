@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Parkourpedia</title>
+    <meta name="description" content="Parkourpedia is a visual guide to parkour's most famous training spots, renowned teams, and notable athletes.">
+    <meta name="author" content="Tanner McManner">
+
+    <!-- Google Fonts: Permanent Marker (urban/street style for headings) + Open Sans (regular body font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">PARKOURPEDIA</h1>
+            </a>
+            <p class="tagline">All things parkour</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list">
+                <span aria-hidden="true">&#9776;</span> Menu
+            </button>
+            <ul id="primary-nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="hero-img" src="../images/parkour-hero.jpg" alt="A traceur captured mid-flip high above the rooftops of Oia, Santorini." width="2800" height="1867">
+            <div class="hero-intro">
+                <h2>What is Parkour?</h2>
+                <p>
+                    Parkour is the art of moving through any environment, urban or
+                    natural, as efficiently as possible using only the human body.
+                    Athletes train to run, jump, vault, climb, and roll over
+                    obstacles rather than around them, turning everyday walls,
+                    railings, and rooftops into a playground.
+                </p>
+            </div>
+        </section>
+
+        <div class="container">
+            <h2 class="highlights-heading">Parkour Highlights</h2>
+
+            <section class="highlights">
+                <section class="highlight-group" aria-labelledby="locations-heading">
+                    <h3 id="locations-heading">Famous Locations</h3>
+                    <ul class="accordion" id="locations-list"></ul>
+                </section>
+
+                <section class="highlight-group" aria-labelledby="teams-heading">
+                    <h3 id="teams-heading">Renowned Teams</h3>
+                    <ul class="accordion" id="teams-list"></ul>
+                </section>
+
+                <section class="highlight-group" aria-labelledby="athletes-heading">
+                    <h3 id="athletes-heading">Notable Athletes</h3>
+                    <ul class="accordion" id="athletes-list"></ul>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Parkourpedia &mdash; Tanner McManner</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/home.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

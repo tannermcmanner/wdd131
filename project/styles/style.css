@@ -1,0 +1,178 @@
+/* ===========================================================
+   Parkourpedia — Global Styles
+   Shared across all pages: reset, color schema, typography,
+   header, navigation, footer, and layout utilities.
+   =========================================================== */
+
+:root {
+    /* --- Color Schema (matches siteplan.html) --- */
+    --color-asphalt: #1d1d1d;      /* primary: headers, nav, footer, body text */
+    --color-concrete: #f2f2f0;     /* neutral: page background */
+    --color-orange: #ff5a1f;       /* accent: links, buttons, highlights */
+    --color-chalk: #ffffff;        /* text on dark surfaces */
+    --color-border: #d8d6d2;       /* neutral: borders, dividers, card outlines */
+
+    /* --- Typography --- */
+    --font-heading: "Permanent Marker", cursive;
+    --font-body: "Open Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--color-asphalt);
+    background: var(--color-concrete);
+    line-height: 1.6;
+}
+
+h1, h2, h3,
+.logo {
+    font-family: var(--font-heading);
+    color: var(--color-asphalt);
+    letter-spacing: 0.5px;
+}
+
+a {
+    color: var(--color-orange);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-asphalt);
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+    background: var(--color-asphalt);
+    color: var(--color-chalk);
+}
+
+.header-top {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 1rem;
+    text-align: center;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo {
+    color: var(--color-orange);
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+}
+
+.tagline {
+    margin: 0;
+    color: var(--color-chalk);
+}
+
+.site-nav {
+    background: var(--color-orange);
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-nav a {
+    display: block;
+    padding: 0.85rem 1.5rem;
+    color: var(--color-asphalt);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a[aria-current="page"] {
+    background: var(--color-asphalt);
+    color: var(--color-chalk);
+}
+
+/* Dropdown toggle button: hidden until the nav switches to dropdown mode */
+.nav-toggle {
+    display: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--color-orange);
+    color: var(--color-asphalt);
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+    background: var(--color-asphalt);
+    color: var(--color-chalk);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background: var(--color-asphalt);
+    color: var(--color-chalk);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+}
+
+.site-footer a {
+    color: var(--color-orange);
+}
+
+/* ---------- Responsive nav ---------- */
+@media (max-width: 750px) and (min-width: 601px) {
+    .site-nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-nav ul.open {
+        display: flex;
+    }
+}

@@ -1,0 +1,65 @@
+/* ===========================================================
+   Parkourpedia — Milestones Page Styles
+   (layout shared with history.css)
+   =========================================================== */
+
+/* Videos use the same box as images; contain keeps the full frame visible */
+.history-item video {
+    flex: 0 0 45%;
+    width: 45%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: var(--color-asphalt);
+    border-radius: 6px;
+}
+
+.page-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+/* Dropdown overlays the content below instead of pushing it down */
+.trick-dropdown {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.trick-dropdown summary {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-orange);
+    border-radius: 6px;
+    color: var(--color-orange);
+    font-weight: 600;
+}
+
+.trick-dropdown[open] summary {
+    background: var(--color-orange);
+    color: #fff;
+}
+
+.trick-dropdown ol {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 15rem;
+    max-height: 18rem;
+    overflow-y: auto;
+    margin: 0.25rem 0 0;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    background: var(--color-chalk);
+    color: var(--color-asphalt);
+    border: 2px solid var(--color-orange);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .history-item video {
+        flex: none;
+        width: 100%;
+    }
+}

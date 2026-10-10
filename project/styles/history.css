@@ -1,0 +1,63 @@
+/* ===========================================================
+   Parkourpedia — History Page Styles
+   =========================================================== */
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+}
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Even items put the image on the right */
+.history-item:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+/* Every image gets the same box; contain keeps the full image visible */
+.history-item img {
+    flex: 0 0 45%;
+    width: 45%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: var(--color-asphalt);
+    border-radius: 6px;
+}
+
+.history-text {
+    flex: 1;
+}
+
+.history-text h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-orange);
+}
+
+.history-text p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .history-item,
+    .history-item:nth-of-type(even) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .history-item img {
+        flex: none;
+        width: 100%;
+    }
+}
